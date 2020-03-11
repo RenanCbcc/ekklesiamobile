@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ekklesiamobile.Android", "ekklesiamobile\ekklesiamobile.Android\ekklesiamobile.Android.csproj", "{A176944C-9E04-4ED6-A6B0-5F5D940F17B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ekklesiamobile", "ekklesiamobile\ekklesiamobile\ekklesiamobile.csproj", "{A73FDD2D-934F-4FDF-AC11-04387FC22A26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A176944C-9E04-4ED6-A6B0-5F5D940F17B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A176944C-9E04-4ED6-A6B0-5F5D940F17B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A176944C-9E04-4ED6-A6B0-5F5D940F17B9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A176944C-9E04-4ED6-A6B0-5F5D940F17B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A176944C-9E04-4ED6-A6B0-5F5D940F17B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A176944C-9E04-4ED6-A6B0-5F5D940F17B9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A73FDD2D-934F-4FDF-AC11-04387FC22A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A73FDD2D-934F-4FDF-AC11-04387FC22A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A73FDD2D-934F-4FDF-AC11-04387FC22A26}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A73FDD2D-934F-4FDF-AC11-04387FC22A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A73FDD2D-934F-4FDF-AC11-04387FC22A26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A73FDD2D-934F-4FDF-AC11-04387FC22A26}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6095BDC-1130-4396-A5B1-E9DE993C91EA}
+	EndGlobalSection
+EndGlobal

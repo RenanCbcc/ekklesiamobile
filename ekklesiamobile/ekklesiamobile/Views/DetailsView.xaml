@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ekklesiamobile.Views.DetailsView"
+             Title="{Binding Member.Name}">
+    <ContentPage.Content>
+        <StackLayout Padding="25">
+            <TableView>
+                <TableRoot>
+                    <TableSection Title="Dados">                        
+                        <TextCell Text="{Binding Member.Name}"></TextCell>
+                        <TextCell Text="{Binding Member.Phone}"></TextCell>                        
+                    </TableSection>
+                    <TableSection Title="Cargo">
+                        <TextCell Text="{Binding Member.Position}"></TextCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+            <Button x:Name="buttonEdit" Text="Editar" Clicked="buttonEdit_Clicked" VerticalOptions="End"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
