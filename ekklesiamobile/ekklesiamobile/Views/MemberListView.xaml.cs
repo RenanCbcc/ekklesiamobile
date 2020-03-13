@@ -49,5 +49,10 @@ namespace ekklesiamobile.Views
             var member = (Member) e.Item;
             Navigation.PushAsync(new DetailsView(member));            
         }
+
+        private void ImageButton_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new NewMemberView());
+        }
     }
 }

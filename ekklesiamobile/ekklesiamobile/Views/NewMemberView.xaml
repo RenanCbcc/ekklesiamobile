@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ekklesiamobile.Views.NewMemberView"
+             Title="Novo Membro">
+    <ContentPage.Content>
+        <StackLayout Padding="25">
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="Dados do novo membro">
+                        <EntryCell Label="Nome:" Text="{Binding Member.Name}">
+
+                        </EntryCell>
+                        <EntryCell Keyboard="Numeric" Label="Telefone:" 
+                                    Text="{Binding Member.Phone}">
+                        </EntryCell>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal" Padding="20, 0">
+                                    <Label Text="Cargo"                                           
+                                           VerticalOptions="Center"></Label>
+                                    <Picker Title="Selecione um gargo"
+                                            ItemsSource="{Binding PositionList}"
+                                            SelectedItem="{Binding SelectedPosition, Mode=TwoWay}">
+                                    </Picker>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button x:Name="buttonSave" Text="Salvar" Clicked="buttonSave_Clicked" VerticalOptions="End"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

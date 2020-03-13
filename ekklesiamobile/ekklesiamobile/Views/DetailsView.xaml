@@ -8,15 +8,13 @@
              Title="{Binding Member.Name}">
     <ContentPage.Content>
         <StackLayout Padding="25">
-            <TableView>
+            <TableView Intent="Data">
                 <TableRoot>
-                    <TableSection Title="Dados">                        
-                        <TextCell Text="{Binding Member.Name}"></TextCell>
-                        <TextCell Text="{Binding Member.Phone}"></TextCell>                        
+                    <TableSection Title="Dados">
+                        <TextCell Detail="Telefone" TextColor="Black" Text="{Binding Member.Phone}"></TextCell>
+                        <TextCell Detail="Cargo" TextColor="Black" Text="{Binding Member.Position}"></TextCell>
                     </TableSection>
-                    <TableSection Title="Cargo">
-                        <TextCell Text="{Binding Member.Position}"></TextCell>
-                    </TableSection>
+
                 </TableRoot>
             </TableView>
 
