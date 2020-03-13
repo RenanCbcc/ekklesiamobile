@@ -6,29 +6,35 @@
              mc:Ignorable="d"
              x:Class="ekklesiamobile.Views.TransactionListView"
              Title="Transações">
-
-    <ListView x:Name="listViewTransactions" ItemsSource="{Binding Transactions}" Margin="25"
+    <AbsoluteLayout>
+        <ListView x:Name="listViewTransactions" ItemsSource="{Binding Transactions}" Margin="25"
              ItemTapped="listViewTransactions_ItemTapped">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <ViewCell.View>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="{Binding Date}" ></Span>
-                                        <Span Text=" - "></Span>
-                                        <Span Text="{Binding Value}" FontAttributes="Bold"></Span>
-                                        <Span Text=" - "></Span>
-                                        <Span Text="{Binding Type}" ></Span>
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </ViewCell.View>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="{Binding Date}" ></Span>
+                                            <Span Text=" - "></Span>
+                                            <Span Text="{Binding Value}" FontAttributes="Bold"></Span>
+                                            <Span Text=" - "></Span>
+                                            <Span Text="{Binding Type}" ></Span>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ImageButton Source="plus.xml" 
+            BackgroundColor="Transparent"
+            AbsoluteLayout.LayoutFlags="PositionProportional"  
+            AbsoluteLayout.LayoutBounds=".95,.95,80,80" 
+            Clicked="ImageButton_Clicked" />
+    </AbsoluteLayout>
 </ContentPage>

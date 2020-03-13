@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ekklesiamobile.Views.NewTransactionView"
+             Title="Nova transação">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="Dados">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="20, 0">
+                                <Label Text="Data"          
+                                           VerticalOptions="Center"></Label>
+
+                                <DatePicker MinimumDate="01/01/2020" 
+                                        Date="{Binding Transaction.Date}"
+                                        Format="D">
+                                </DatePicker>                                
+                            </StackLayout>                            
+                        </ViewCell>
+                        <EntryCell Keyboard="Numeric" Label="Valor"
+                                   Placeholder="{Binding Value}"
+                                   Text="{Binding Value}">
+                        </EntryCell>
+                        <EntryCell Keyboard="Text" Label="Categoria"
+                                   Placeholder="Ex.: Papelaria"
+                                   Text="{Binding Transaction.Category}">
+                        </EntryCell>
+                        <ViewCell>                            
+                            <StackLayout Orientation="Horizontal" Padding="20, 0">
+                                <Label Text="Tipo"                                           
+                                           VerticalOptions="Center"></Label>
+                                <Picker Title="Selecione um tipo"
+                                            ItemsSource="{Binding TransactionTypeList}"
+                                            SelectedItem="{Binding SelectedTransactionType, Mode=TwoWay}">
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button x:Name="buttonSave" Text="Salvar" Clicked="buttonSave_Clicked" VerticalOptions="End"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

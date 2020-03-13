@@ -1,9 +1,6 @@
 ﻿using ekklesiamobile.Models.TransactionModel;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -24,6 +21,11 @@ namespace ekklesiamobile.Views
         private void listViewTransactions_ItemTapped(object sender, ItemTappedEventArgs e)
         {
 
+        }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NewTransactionView());
         }
     }
 }

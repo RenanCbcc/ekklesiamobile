@@ -8,7 +8,7 @@ namespace ekklesiamobile
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MemberListView());            
+            MainPage = new NavigationPage(new TransactionListView());            
         }
 
         protected override void OnStart()
